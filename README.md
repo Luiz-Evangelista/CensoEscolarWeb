@@ -2,4 +2,4 @@
 
 ## Projetos relacionados
 
-- **CensoEscolarDataApp:** [Acessar repositório](https://github.com/Luiz-Evangelista/CensoEscolarDataApp)
+- **CensoEscolarDataApp:** (https://github.com/Luiz-Evangelista/CensoEscolarDataApp)
