@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import { Alert, Button, OverlayTrigger, Spinner, Table, Tooltip } from 'react-bootstrap';
 import { FaTrash } from 'react-icons/fa';
@@ -44,8 +45,11 @@ const InstituicaoEnsino = () => {
         if (!response.ok) {
           throw new Error(`Status ${response.status}`);
         }
+
         // Remove a IE da lista local sem recarregar da API
-        setInstituicoesEnsino((anteriores) => anteriores.filter((ie) => ie.id !== id));
+        setInstituicoesEnsino((anteriores) =>
+          anteriores.filter((ie) => ie.id !== id)
+        );
         setErro(null);
       })
       .catch((error) => {
@@ -102,7 +106,10 @@ const InstituicaoEnsino = () => {
                 <td>{formatarNumero(ie.qt_mat_fund)}</td>
                 <td>{formatarNumero(ie.qt_mat_med)}</td>
                 <td>
-                  <OverlayTrigger placement="top" overlay={<Tooltip>Remover</Tooltip>}>
+                  <OverlayTrigger
+                    placement="top"
+                    overlay={<Tooltip>Remover</Tooltip>}
+                  >
                     <Button
                       variant="danger"
                       size="sm"

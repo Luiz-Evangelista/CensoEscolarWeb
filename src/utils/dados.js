@@ -1,6 +1,8 @@
+
 // Funções auxiliares para trabalhar com os dados das Instituições de Ensino (IE)
 
-export const formatarNumero = (numero) => (numero ?? 0).toLocaleString('pt-BR');
+export const formatarNumero = (numero) =>
+  (numero ?? 0).toLocaleString('pt-BR');
 
 export const somar = (lista, campo) =>
   lista.reduce((total, item) => total + item[campo], 0);
